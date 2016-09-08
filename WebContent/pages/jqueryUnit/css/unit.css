@@ -1,0 +1,45 @@
+.tabsDiv{width: 500px;height: 350px;margin-top: 0px;margin-left: 0px;}  
+.tabsDiv ul{  
+    width: 500px;height: 20px;  
+    list-style: none;  
+      
+    margin-bottom: 0px;margin: 0px;  
+    padding: 0px;  
+    border-left:solid 1px #ffffff;border-right:solid 1px #ffffff;border-top:solid 1px #ffffff;border-bottom:solid 1px #e0e0e0;  
+}  
+  
+.tabsDiv div{  
+    width: 500px;height: 330px;  
+    background-color: #ffffff;   
+    border:solid 1px #e0e0e0;  
+}  
+  
+  
+.tabsSeletedLi{  
+    width: 100px;height: 20px;  
+    background-color: white;  
+    float: left;  
+    text-align: center;  
+    border-left:solid 1px #e0e0e0;border-right:solid 1px #e0e0e0;border-top:solid 1px #e0e0e0;border-bottom:solid 1px #ffffff;  
+}  
+  
+.tabsSeletedLi a{  
+    width: 100px;  
+    height: 20px;  
+    color:#000000;  
+    text-decoration:none;  
+}  
+  
+.tabsUnSeletedLi{  
+    width: 100px;height: 20px;  
+    background-color: #e0e0e0;   
+    float: left;  
+    text-align: center;  
+    border:solid 1px #e0e0e0;  
+}  
+  
+.tabsUnSeletedLi a{  
+    width: 100px;height: 20px;  
+    color: #ffffff;  
+    text-decoration:none;  
+}  

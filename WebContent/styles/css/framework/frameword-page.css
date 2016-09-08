@@ -1,0 +1,25 @@
+/*头部************/
+.head-content {
+	width: 100%;
+	height: 100%;
+	background: #D6EDB7;
+}
+.head-content .motto{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+
+/*左边************/
+.side-content {
+	width: 100%;
+	height: 100%;
+	background: #D6EDB7;
+}
+
+/*底部************/
+.foot-content {
+	width: 100%;
+	height: 100%;
+	background: #D6EDB7;
+}

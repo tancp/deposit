@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>驼峰转换</title>
+<script type="text/javascript" src="../../scripts/jquery/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+	//1.转驼峰
+	function b(input) {
+		//var s1 = "foo_style_css";
+		return input.replace("//-(/w)/g", function(all, letter) {
+			return letter.toUpperCase();
+		});
+	}
+	function test(str){
+		str = str.toLowerCase()
+
+	    var arr = str.split("_");//用split()函数来进行分割字符串arr里面包括【border，bottom，color】  
+	    for(var i=1;i<arr.length;i++){//从数组的第二项开始循环，charAt(0)找到第一个字母。substring(1)截掉第一个字母。  
+	        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substring(1);//循环之后把得到的字符赋给arr。【border，Bottom， Color】  
+	        //alert(arr[i]);  
+	    }  
+	    return arr.join("");//用join方法来拼接，空拼接。就变成borderBottomColor  
+	}  
+	
+
+	//2.驼峰转连字符:
+	function a(input) {
+		//var s = "fooStyleCss";
+		return input.replace(/([A-Z])/g, "_$1").toUpperCase();
+	}
+	
+	function dd(callback) {
+		var value1 = $('#ta1').val();
+		var arr = value1.split('\n');
+
+		var resultArr = [];
+		for (var i = 0; i < arr.length; i++) {
+			var value = $.trim(arr[i]);
+			resultArr.push(callback(value));
+		}
+		return resultArr;
+	}
+
+	function toB(arr) {
+		var aa = arr.join('\n');
+		$('#ta2').val(aa);
+	}
+
+	$(function(){
+		$('#a').click(function() {
+			var arr = dd(test);
+			toB(arr);
+		});
+
+		$('#b').click(function() {
+			var arr = dd(a);
+			toB(arr);
+		});
+	})
+</script>
+</head>
+<body>
+	<textarea id="ta1" rows="8" cols="88"></textarea>
+	==>
+	<textarea id="ta2" rows="8" cols="88"></textarea>
+
+	</br>
+	<input type="button" id="a" value="转驼峰" />
+	<input type="button" id="b" value="驼峰转连字符" />
+</body>
+</html>
